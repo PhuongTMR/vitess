@@ -56,11 +56,11 @@ func isMergeable(ctx *plancontext.PlanningContext, query sqlparser.SelectStateme
 
 		// if we have grouping, we have already checked that it's safe, and don't need to check for aggregations
 		// but if we don't have groupings, we need to check if there are aggregations that will mess with us
-		if ContainsAggr(ctx, node.SelectExprs) {
+		if ctx.ContainsAggr(node.SelectExprs) {
 			return false
 		}
 
-		if ContainsAggr(ctx, node.Having) {
+		if ctx.ContainsAggr(node.Having) {
 			return false
 		}
 
@@ -758,7 +758,7 @@ func mergeSubqueryInputs(ctx *plancontext.PlanningContext, in, out Operator, joi
 
 	// sharded routing is complex, so we handle it in a separate method
 	case inner == sharded && outer == sharded:
-		return tryMergeJoinShardedRouting(ctx, inRoute, outRoute, m, joinPredicates)
+		return tryMergeShardedRouting(ctx, inRoute, outRoute, m, joinPredicates)
 
 	default:
 		return nil

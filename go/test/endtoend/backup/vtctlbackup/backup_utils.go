@@ -837,7 +837,7 @@ func checkTabletType(t *testing.T, alias string, tabletType topodata.TabletType)
 		output, err := localCluster.VtctldClientProcess.ExecuteCommandWithOutput("GetTablet", alias)
 		require.NoError(t, err)
 		var tabletPB topodata.Tablet
-		err = json2.Unmarshal([]byte(output), &tabletPB)
+		err = json2.UnmarshalPB([]byte(output), &tabletPB)
 		require.NoError(t, err)
 		if tabletType == tabletPB.Type {
 			return
@@ -1032,7 +1032,7 @@ func verifySemiSyncStatus(t *testing.T, vttablet *cluster.Vttablet, expectedStat
 }
 
 func terminateBackup(t *testing.T, alias string) {
-	stopBackupMsg := "Done taking Backup"
+	stopBackupMsg := "Completed backing up"
 	if useXtrabackup {
 		stopBackupMsg = "Starting backup with"
 		useXtrabackup = false
@@ -1058,7 +1058,7 @@ func terminateBackup(t *testing.T, alias string) {
 		text := scanner.Text()
 		if strings.Contains(text, stopBackupMsg) {
 			tmpProcess.Process.Signal(syscall.SIGTERM)
-			found = true //nolint
+			found = true // nolint
 			return
 		}
 	}
