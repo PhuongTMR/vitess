@@ -1,6 +1,7 @@
 module vitess-mixin
 
 go 1.22.4
+toolchain go1.22.10
 
 require (
 	github.com/evanphx/json-patch v5.9.0+incompatible
@@ -11,7 +12,7 @@ require (
 	// See https://github.com/prometheus/prometheus/issues/5590#issuecomment-546368944
 	github.com/prometheus/prometheus v1.8.2-0.20191017095924-6f92ce560538
 	github.com/stretchr/testify v1.9.0
-	vitess.io/vitess v0.19.4
+	vitess.io/vitess v0.19.8
 )
 
 require (

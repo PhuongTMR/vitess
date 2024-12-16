@@ -904,5 +904,5 @@ sigs.k8s.io/structured-merge-diff/v4 v4.2.3/go.mod h1:qjx8mGObPmV2aSZepjQjbmb2ih
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
 sigs.k8s.io/yaml v1.4.0 h1:Mk1wCc2gy/F0THH0TAp1QYyJNzRm2KCLy3o5ASXVI5E=
 sigs.k8s.io/yaml v1.4.0/go.mod h1:Ejl7/uTz7PSA4eKMyQCUTnhZYNmLIl+5c2lQPGR2BPY=
-vitess.io/vitess v0.19.4 h1:fJhZm5RknYbF7YUBXBmcvST/mvA4CeevlI9N0TLlYXA=
-vitess.io/vitess v0.19.4/go.mod h1:15uIi9x/Gu+BdDhUR80yP0M1v7aMG2mZQXSd56CE2t0=
+vitess.io/vitess v0.19.8 h1:d3pUaIQD8fb38aaYMk3nFUrzZkrSUt1XVeBobIoSxiw=
+vitess.io/vitess v0.19.8/go.mod h1:P8ymq5DFC3ItCBzP2PFzesaaHzZRJHi65H7ZfSMCCZI=
