@@ -93,7 +93,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.31.12
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.19.10
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.88.3
-	github.com/aws/smithy-go v1.23.0
+	github.com/aws/smithy-go v1.24.2
 	github.com/bndr/gotabulate v1.1.2
 	github.com/dustin/go-humanize v1.0.1
 	github.com/gammazero/deque v1.1.0
@@ -171,7 +171,7 @@ require (
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/metric v0.54.0 // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.54.0 // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
-	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.7.1 // indirect
+	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.7.8 // indirect
 	github.com/aws/aws-sdk-go-v2/credentials v1.18.16 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.9 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.9 // indirect
